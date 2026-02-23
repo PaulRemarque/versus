@@ -1,0 +1,121 @@
+
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
+    
+    :root {
+      --accent: #c0392b;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .logo-font {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .hero-bg {
+      background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('https://picsum.photos/seed/versus-hero/1920/1080');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .product-card {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .product-card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.5);
+    }
+
+    .slide {
+      transition: transform 0.7s cubic-bezier(0.32, 0.72, 0, 1);
+    }
+
+    .nav-link {
+      position: relative;
+    }
+    
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #c0392b;
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover:after {
+      width: 100%;
+    }
+
+    /* Mobile optimizations */
+    @media (max-width: 768px) {
+      .product-card img {
+        height: 250px !important;
+      }
+      
+      button, input, textarea {
+        font-size: 16px !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      /* Prevent zoom on iOS when clicking inputs */
+      input, textarea, select {
+        font-size: 16px;
+      }
+      
+      .hero-bg {
+        background-size: cover;
+        background-position: center;
+      }
+    }
+
+    /* Improve button touch targets - minimum 44x44px */
+    button {
+      min-height: 44px;
+      min-width: 44px;
+    }
+
+    /* Smooth scroll behavior */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Prevent horizontal scrolling */
+    body {
+      overflow-x: hidden;
+    }
+
+    /* Better touch interactions */
+    a, button {
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+
+    /* Improve input styling on mobile */
+    input, textarea, select {
+      font-size: 16px;
+      border-radius: 8px;
+    }
+
+    /* Hamburger menu optimization */
+    #mobile-menu-btn {
+      cursor: pointer;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+
+    /* Product card optimization for mobile */
+    @media (max-width: 480px) {
+      .product-card {
+        border-radius: 1.5rem;
+      }
+      
+      .product-card img {
+        height: 200px !important;
+      }
+    }

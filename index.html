@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Versus Man — Мужская премиум одежда | Анапа</title>
+  <meta name="description" content="Магазин Versus Man в Анапе. Брендовая мужская одежда, костюмы, рубашки, обувь, аксессуары. Скидки до 20%. Доставка по России."/>
+  <link rel="icon" href="img/icon.png" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+  <link rel="stylesheet" href="styles.css">
+  </head>
+<body class="bg-zinc-950 text-zinc-100 overflow-x-hidden">
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/90 backdrop-blur-lg border-b border-zinc-800">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-red-700 rounded-full flex items-center justify-center text-white font-bold text-2xl logo-font">V</div>
+        <div>
+          <span class="text-3xl font-bold tracking-tighter logo-font">VERSUS</span>
+          <span class="text-3xl font-bold tracking-tighter text-red-600 logo-font">MAN</span>
+        </div>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center gap-10 text-lg">
+        <a href="#catalog" onclick="smoothScrollTo('catalog')" class="nav-link font-medium">Каталог</a>
+        <a href="#promo" onclick="smoothScrollTo('promo')" class="nav-link font-medium">Акции</a>
+        <a href="#reviews" onclick="smoothScrollTo('reviews')" class="nav-link font-medium">Отзывы</a>
+        <a href="#contacts" onclick="smoothScrollTo('contacts')" class="nav-link font-medium">Контакты</a>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <a href="https://wa.me/79890020295" target="_blank"
+           class="flex items-center gap-2 bg-green-600 hover:bg-green-500 px-6 py-3 rounded-2xl font-semibold transition-all">
+          <i class="fab fa-whatsapp text-2xl"></i>
+          <span class="hidden sm:inline">WhatsApp</span>
+        </a>
+        <a href="https://www.instagram.com/versus__man" target="_blank" class="text-3xl hover:text-red-600 transition-colors">
+          <i class="fab fa-instagram"></i>
+        </a>
+        
+        <!-- Mobile burger -->
+        <button id="mobile-menu-btn" class="md:hidden text-3xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 border-t border-zinc-800 py-6">
+      <div class="flex flex-col items-center gap-6 text-2xl">
+        <a href="#catalog" onclick="toggleMobileMenu()" class="hover:text-red-600">Каталог</a>
+        <a href="#promo" onclick="toggleMobileMenu()" class="hover:text-red-600">Акции</a>
+        <a href="#reviews" onclick="toggleMobileMenu()" class="hover:text-red-600">Отзывы</a>
+        <a href="#contacts" onclick="toggleMobileMenu()" class="hover:text-red-600">Контакты</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero-bg h-screen flex items-center justify-center text-center relative">
+    <div class="max-w-5xl mx-auto px-6">
+      <h1 class="text-5xl sm:text-6xl md:text-8xl font-bold tracking-tighter logo-font mb-6 leading-none">
+        VERSUS <span class="text-red-600">MAN</span>
+      </h1>
+      <p class="text-lg sm:text-2xl md:text-3xl text-zinc-300 mb-10 max-w-2xl mx-auto">
+        Премиальная мужская одежда в Анапе<br>
+        <span class="text-red-500">Скидки до 20%</span>
+      </p>
+      <div class="flex flex-col sm:flex-row gap-5 justify-center">
+        <a href="#catalog" onclick="smoothScrollTo('catalog')"
+           class="bg-red-700 hover:bg-red-600 text-white text-lg sm:text-xl font-semibold px-8 sm:px-12 py-5 sm:py-6 rounded-3xl transition-all flex items-center justify-center gap-3">
+          <i class="fas fa-store"></i>
+          Смотреть каталог
+        </a>
+        <a href="https://wa.me/79890020295" target="_blank"
+           class="border-2 border-white hover:bg-white hover:text-zinc-950 text-lg sm:text-xl font-semibold px-8 sm:px-12 py-5 sm:py-6 rounded-3xl transition-all flex items-center justify-center gap-3">
+          <i class="fab fa-whatsapp"></i> 
+          Написать в WhatsApp
+        </a>
+      </div>
+    </div>
+
+  
+    <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-sm opacity-70">
+      <span>Листай вниз</span>
+      <i class="fas fa-chevron-down animate-bounce text-2xl"></i>
+    </div>
+  </header>
+
+  <!-- О НАС -->
+  <section class="py-24 bg-zinc-900">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-8 sm:gap-16 items-center">
+        <div>
+          <span class="text-red-600 font-semibold tracking-widest text-sm sm:text-base">С 2024 ГОДА</span>
+          <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold logo-font leading-none mt-3">Мужская элегантность<br>в сердце Анапы</h2>
+          <p class="mt-10 text-base sm:text-lg text-zinc-300 leading-relaxed">
+            Versus Man — это не просто магазин. Это место, где мужчина может собрать красивый образ.
+            Идеальная посадка и персональный подход.
+          </p>
+          <div class="grid grid-cols-3 gap-4 sm:gap-8 mt-12 sm:mt-16">
+            <div>
+              <div class="text-2xl sm:text-4xl font-bold text-red-600">300+</div>
+              <div class="text-xs sm:text-base text-zinc-400">товаров в наличии</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-4xl font-bold text-red-600">20%</div>
+              <div class="text-xs sm:text-base text-zinc-400">максимальная скидка</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-4xl font-bold text-red-600">100%</div>
+              <div class="text-xs sm:text-base text-zinc-400">довольных клиентов</div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <img src="img/img1.jpg" alt="Интерьер магазина Versus Man" 
+               class="rounded-3xl shadow-2xl" loading="lazy">
+          <div class="absolute -bottom-6 -left-6 bg-zinc-900 border border-zinc-700 p-6 rounded-3xl max-w-xs">
+            <p class="italic">"Лучший выбор в Анапе. Подарили очки и ящик абрикосов!"</p>
+            <p class="mt-4 text-red-600 font-medium">— Абрик, 14 лет</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- КАТАЛОГ -->
+  <section id="catalog" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 sm:gap-0 mb-12 sm:mb-16">
+        <div>
+          <span class="text-red-600 uppercase tracking-widest font-medium text-sm">Выбор сезона</span>
+          <h2 class="text-4xl sm:text-6xl font-bold logo-font">Наш каталог</h2>
+        </div>
+        <a href="https://www.instagram.com/versus__man" target="_blank" 
+           class="text-red-600 hover:text-red-500 flex items-center gap-2 text-lg whitespace-nowrap">
+          Больше в Instagram <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <!-- Карточка 1 -->
+        <div class="product-card bg-zinc-900 rounded-3xl overflow-hidden">
+          <img src="img/img2.jpg" alt="Черные джинсы" class="w-full h-96 object-cover" loading="lazy">
+          <div class="p-6">
+            <div class="flex flex-col sm:flex-row justify-between gap-2">
+              <h3 class="font-semibold text-lg sm:text-xl">Черные джинсы Gaykadzor mafia</h3>
+              <span class="text-red-600 font-bold whitespace-nowrap">18 900 ₽</span>
+            </div>
+            <p class="text-zinc-400 text-sm line-through">26 500 ₽</p>
+            <button onclick="buyInWA('Черные джинсы')" 
+                    class="mt-6 w-full bg-red-700 hover:bg-red-600 py-3 sm:py-4 rounded-2xl font-semibold transition-all min-h-12 text-base">
+              В корзину
+            </button>
+          </div>
+        </div>
+
+        <!-- Карточка 2 -->
+        <div class="product-card bg-zinc-900 rounded-3xl overflow-hidden">
+          <img src="img/img3.jpg" alt="Белая рубашка" class="w-full h-96 object-cover" loading="lazy">
+          <div class="p-6">
+            <div class="flex flex-col sm:flex-row justify-between gap-2">
+              <h3 class="font-semibold text-lg sm:text-xl">Зипка Джорджио Армяни</h3>
+              <span class="text-red-600 font-bold whitespace-nowrap">3 900 ₽</span>
+            </div>
+            <button onclick="buyInWA('Зипка армяни')" 
+                    class="mt-6 w-full bg-red-700 hover:bg-red-600 py-3 sm:py-4 rounded-2xl font-semibold transition-all min-h-12 text-base">
+              В корзину
+            </button>
+          </div>
+        </div>
+
+        <!-- Карточка 3 -->
+        <div class="product-card bg-zinc-900 rounded-3xl overflow-hidden">
+          <img src="img/img4.jpg" alt="Кожаные туфли" class="w-full h-96 object-cover" loading="lazy">
+          <div class="p-6">
+            <div class="flex flex-col sm:flex-row justify-between gap-2">
+              <h3 class="font-semibold text-lg sm:text-xl">Полузамок "Бабалух"</h3>
+              <span class="text-red-600 font-bold whitespace-nowrap">8 900 ₽</span>
+            </div>
+            <button onclick="buyInWA('Полузамок')" 
+                    class="mt-6 w-full bg-red-700 hover:bg-red-600 py-3 sm:py-4 rounded-2xl font-semibold transition-all min-h-12 text-base">
+              В корзину
+            </button>
+          </div>
+        </div>
+
+        <!-- Карточка 4 -->
+        <div class="product-card bg-zinc-900 rounded-3xl overflow-hidden">
+          <img src="img/img5.jpg" alt="Полузамок Brunetto Cunelli" class="w-full h-96 object-cover" loading="lazy">
+          <div class="p-6">
+            <div class="flex flex-col sm:flex-row justify-between gap-2">
+              <h3 class="font-semibold text-lg sm:text-xl">Полузамок Brunetto Cunelli</h3>
+              <span class="text-red-600 font-bold whitespace-nowrap">12 900 ₽</span>
+            </div>
+            <button onclick="buyInWA('Вельветовый пиджак')" 
+                    class="mt-6 w-full bg-red-700 hover:bg-red-600 py-3 sm:py-4 rounded-2xl font-semibold transition-all min-h-12 text-base">
+              В корзину
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- АКЦИИ / СЛАЙДЕР -->
+  <section id="promo" class="py-24 bg-black">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-6xl font-bold logo-font text-center mb-16">Горячие акции</h2>
+      
+      <div class="relative overflow-hidden rounded-3xl">
+        <div id="promo-slides" class="flex transition-transform duration-700 ease-out">
+          <!-- Slide 1 -->
+          <div class="min-w-full bg-zinc-900 p-6 sm:p-12 md:p-20 flex flex-col md:flex-row items-center gap-6 sm:gap-12">
+            <img src="img/img6.jpg" class="w-full md:w-1/2 rounded-2xl" alt="Скидка 70%" loading="lazy">
+            <div class="md:w-1/2">
+              <div class="text-red-600 text-4xl sm:text-6xl font-bold">-20%</div>
+              <h3 class="text-3xl sm:text-5xl font-bold mt-4">Куртки</h3>
+              <p class="mt-6 text-base sm:text-xl text-zinc-300">Куртки, спортивки, кирпичи. Только до конца недели!</p>
+              <button onclick="buyInWA('Акция верхняя одежда')" 
+                      class="mt-10 bg-white text-black px-8 sm:px-12 py-4 sm:py-5 rounded-2xl font-bold text-base sm:text-lg hover:bg-zinc-200">
+                Забрать со скидкой
+              </button>
+            </div>
+          </div>
+          
+          <!-- Slide 2 -->
+          <div class="min-w-full bg-zinc-900 p-6 sm:p-12 md:p-20 flex flex-col md:flex-row items-center gap-6 sm:gap-12">
+            <img src="img/img7.jpg" class="w-full md:w-1/2 rounded-2xl" alt="Новинки" loading="lazy">
+            <div class="md:w-1/2">
+              <div class="text-amber-400 text-4xl sm:text-6xl font-bold">NEW</div>
+              <h3 class="text-3xl sm:text-5xl font-bold mt-4">Коллекция 2026</h3>
+              <p class="mt-6 text-xl text-zinc-300">Ну Вове с кайфом эта куртка села честно сказать</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Arrows -->
+        <button onclick="prevSlide()" class="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black p-3 sm:p-5 rounded-full text-2xl sm:text-3xl transition-all min-h-12 min-w-12 sm:min-h-14 sm:min-w-14">
+          ←
+        </button>
+        <button onclick="nextSlide()" class="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black p-3 sm:p-5 rounded-full text-2xl sm:text-3xl transition-all min-h-12 min-w-12 sm:min-h-14 sm:min-w-14">
+          →
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ОТЗЫВЫ -->
+  <section id="reviews" class="py-24">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-4xl sm:text-6xl font-bold logo-font mb-12 sm:mb-16">Что говорят клиенты</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-zinc-900 p-6 sm:p-10 rounded-3xl">
+          <p class="italic text-base sm:text-lg">"Зашёл за футболкой — вышел с новым уровнем стиля и пустым кошельком. Не понял, как, но доволен!"</p>
+          <div class="mt-8 flex items-center gap-4 justify-center">
+            <img src="img/Arman.jpg" alt="Сергей Айвазян" class="w-12 h-12 rounded-full object-cover">
+            <div>
+              <div class="font-semibold text-sm sm:text-base">Сергей Айвазян</div>
+              <div class="text-zinc-500 text-xs sm:text-sm">Анапа</div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-zinc-900 p-6 sm:p-10 rounded-3xl">
+          <p class="italic text-base sm:text-lg">"Ничего не понял, но выгляжу с кайфом. Спасибо"</p>
+          <div class="mt-8 flex items-center gap-4 justify-center">
+            <img src="img/makarena.jpg" alt="Карена Макарена" class="w-12 h-12 rounded-full object-cover">
+            <div>
+              <div class="font-semibold text-sm sm:text-base">Карена Макарена.</div>
+              <div class="text-zinc-500 text-xs sm:text-sm">Дубай</div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-zinc-900 p-6 sm:p-10 rounded-3xl">
+          <p class="italic text-base sm:text-lg">"Я одобрил. Хотя меня никто даже не спрашивал"</p>
+          <div class="mt-8 flex items-center gap-4 justify-center">
+            <img src="img/Abrik.jpg" alt="Даниель Саакян" class="w-12 h-12 rounded-full object-cover">
+            <div>
+              <div class="font-semibold text-sm sm:text-base">Даниель Саакян</div>
+              <div class="text-zinc-500 text-xs sm:text-sm">Баку</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- КОНТАКТЫ -->
+  <section id="contacts" class="py-24 bg-zinc-900">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-8 sm:gap-16">
+        <!-- Форма -->
+        <div>
+          <h2 class="text-4xl sm:text-6xl font-bold logo-font mb-8 sm:mb-10">Связаться с нами</h2>
+          <form id="contact-form" class="space-y-6">
+            <input type="text" id="name" placeholder="Ваше имя" 
+                   class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-4 sm:px-6 py-4 sm:py-5 text-base focus:outline-none focus:border-red-600 min-h-12">
+            <input type="tel" id="phone" placeholder="Телефон" 
+                   class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-4 sm:px-6 py-4 sm:py-5 text-base focus:outline-none focus:border-red-600 min-h-12">
+            <textarea id="message" rows="5" placeholder="Что хотите заказать или спросить?" 
+                      class="w-full bg-zinc-800 border border-zinc-700 rounded-2xl px-4 sm:px-6 py-4 sm:py-5 text-base focus:outline-none focus:border-red-600"></textarea>
+            <button type="button" onclick="sendForm()" 
+                    class="w-full bg-red-700 hover:bg-red-600 py-5 sm:py-6 text-base sm:text-xl font-semibold rounded-3xl transition-all min-h-12">
+              Отправить сообщение
+            </button>
+          </form>
+        </div>
+
+        <!-- Инфо + карта -->
+        <div class="space-y-10">
+          <div>
+            <div class="flex items-start sm:items-center gap-4 text-lg sm:text-2xl mb-6">
+              <i class="fas fa-map-marker-alt text-red-600 mt-1 sm:mt-0 flex-shrink-0"></i>
+              <div>
+                <div class="font-semibold">ул. Крымская, 27</div>
+                <div class="text-zinc-400 text-sm sm:text-base">Анапа, Краснодарский край</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 text-lg sm:text-2xl">
+              <i class="fas fa-clock text-red-600 flex-shrink-0"></i>
+              <div>
+                <div class="font-semibold text-sm sm:text-base">Ежедневно 10:00 – 21:00</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-3xl overflow-hidden border border-zinc-700">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.123456789!2d37.3164!3d44.8945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z0YPQuyDRgdC-0L3QuNC60L7QstCwIDI3LzEsINC60YDQsNC90L7QstCw!5e0!3m2!1sru!2sru!4v1700000000000" 
+              width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+          </div>
+
+          <div class="flex gap-6 text-2xl sm:text-3xl">
+            <a href="https://wa.me/79890020295" target="_blank" class="text-green-500 hover:scale-110 transition-transform inline-flex items-center justify-center w-12 h-12"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/versus__man" target="_blank" class="hover:scale-110 transition-transform inline-flex items-center justify-center w-12 h-12"><i class="fab fa-instagram"></i></a>
+            <a href="tel:+79890020295" class="hover:scale-110 transition-transform inline-flex items-center justify-center w-12 h-12"><i class="fas fa-phone"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black py-16 border-t border-zinc-800">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <div class="flex items-center justify-center gap-3 mb-6">
+        <div class="w-8 h-8 bg-red-700 rounded-full flex items-center justify-center text-white text-xl logo-font">V</div>
+        <span class="text-4xl font-bold tracking-tighter logo-font">VERSUS MAN</span>
+      </div>
+      <p class="text-zinc-400">© 2026 Versus Man • Анапа • Все права защищены</p>
+      <p class="mt-2 text-zinc-500 text-sm">Доставка по всей России • Без выходных</p>
+    </div>
+  </footer>
+
+  <!-- Плавающая кнопка WhatsApp -->
+  <a href="https://wa.me/79890020295" target="_blank"
+     class="fixed bottom-8 right-8 bg-green-500 w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center text-2xl sm:text-4xl shadow-2xl hover:scale-110 transition-transform z-50 active:scale-95">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
